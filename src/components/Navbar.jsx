@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Navbar() {
   return (
     <nav style={{
@@ -10,15 +12,17 @@ export default function Navbar() {
       borderBottom: '1px solid rgba(184,134,11,0.15)',
       width: '100%',
     }}>
-      <span style={{
+      <Link to="/" style={{
         fontFamily: 'Cormorant Garamond, serif',
         fontSize: '1.4rem', fontWeight: 700,
-        color: '#b8860b', letterSpacing: '0.04em'
+        color: '#b8860b', letterSpacing: '0.04em',
+        textDecoration: 'none'
       }}>
         Ida Byrd-Hill
-      </span>
+      </Link>
+
       <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>
-        {[['About', '#about'], ['Keynotes', '#speaking'], ['Book Ida', '#book-ida']].map(([label, href]) => (
+        {[['About', '#about'], ['Keynotes', '#speaking']].map(([label, href]) => (
           <li key={label}>
             <a href={href} style={{
               color: '#5c3d1e', fontSize: '0.82rem',
@@ -31,6 +35,22 @@ export default function Navbar() {
             </a>
           </li>
         ))}
+        <li>
+          <Link to="/book" style={{
+            color: '#fff9f2',
+            fontSize: '0.82rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            fontFamily: 'Outfit, sans-serif',
+            background: 'linear-gradient(135deg, #b8860b, #c4667a)',
+            padding: '0.55rem 1.25rem',
+            transition: 'opacity 0.2s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
+          onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
+            Book Ida
+          </Link>
+        </li>
       </ul>
     </nav>
   )

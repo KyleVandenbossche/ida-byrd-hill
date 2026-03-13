@@ -1,4 +1,5 @@
 import idaPhoto from '../assets/ida-hero.png'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -90,7 +91,7 @@ export default function Hero() {
           </p>
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="#book-ida" style={{
+            <Link to="/book" style={{
               background: 'linear-gradient(135deg, #b8860b, #9a6f09)',
               color: '#faf6ef',
               padding: '0.95rem 2.2rem',
@@ -100,8 +101,8 @@ export default function Hero() {
               fontSize: 'clamp(0.7rem, 1.1vw, 0.82rem)',
               fontFamily: 'Outfit, sans-serif',
               boxShadow: '0 4px 20px rgba(184,134,11,0.25)'
-            }}>Book a Keynote</a>
-            <a href="#speaking" style={{
+            }}>Book a Keynote</Link>
+            <a href="#about" style={{
               border: '1.5px solid #b8860b',
               color: '#b8860b',
               padding: '0.95rem 2.2rem',
@@ -110,7 +111,7 @@ export default function Hero() {
               fontSize: 'clamp(0.7rem, 1.1vw, 0.82rem)',
               fontFamily: 'Outfit, sans-serif',
               background: 'transparent'
-            }}>View Keynotes</a>
+            }}>Learn More</a>
           </div>
         </div>
 
@@ -159,7 +160,7 @@ export default function Hero() {
             }}
           />
 
-          {/* Floating badge */}
+          {/* Floating badge — Books */}
           <div style={{
             position: 'absolute',
             bottom: '8%',
@@ -174,7 +175,7 @@ export default function Hero() {
             <div style={{ fontFamily: 'Outfit, sans-serif', fontSize: '0.7rem', color: '#7a5c3a', letterSpacing: '0.05em', marginTop: '0.2rem' }}>Books Published</div>
           </div>
 
-          {/* Floating badge 2 */}
+          {/* Floating badge — Bootcamp */}
           <div style={{
             position: 'absolute',
             top: '10%',
